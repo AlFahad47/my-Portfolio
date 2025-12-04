@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* --- CUSTOM THEME OVERRIDES --- */
+@layer base {
+  
+  /* ☀️ LIGHT MODE Customization */
+  :root,
+  [data-theme="light"] {
+    /* PRIMARY COLOR (A nice Ocean Blue) */
+    /* format: Hue Saturation% Lightness% */
+    --p: 212 100% 48%; 
+    --pf: 212 100% 40%; /* Primary Focus (darker) */
+    
+    /* SECONDARY COLOR (Orange) */
+    --s: 25 95% 53%; 
+
+    /* BACKGROUNDS */
+    --b1: 0 0% 100%;   /* Base-100: Pure White */
+    --b2: 210 20% 98%; /* Base-200: Very light gray */
+    --b3: 210 20% 94%; /* Base-300: Light gray */
+    
+    /* TEXT CONTENT */
+    --bc: 215 28% 17%; /* Base Content: Dark Navy (almost black) */
+  }
+
+  /* 🌙 DARK MODE Customization */
+  [data-theme="dark"] {
+    /* PRIMARY COLOR (Neon Purple) */
+    --p: 270 100% 60%; 
+    --pf: 270 100% 50%;
+
+    /* SECONDARY COLOR (Pink) */
+    --s: 320 80% 60%;
+
+    /* BACKGROUNDS */
+    --b1: 222 47% 11%; /* Base-100: Deep Night Blue */
+    --b2: 217 33% 17%; /* Base-200: Lighter Blue/Grey */
+    --b3: 215 28% 25%; /* Base-300: Even lighter */
+    
+    /* TEXT CONTENT */
+    --bc: 210 20% 98%; /* Base Content: Off-white */
+  }
+}
+
+.bg-grid-pattern {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
